@@ -54,8 +54,8 @@ def sendemail(to,content):
     server = smtplib.SMTP('smtp.gmail.com',587)
     server.ehlo()
     server.starttls()
-    server.login('gameingadda21@gmail.com','nikunj@210')
-    server.sendmail('gameingadda21@gmail.com',to,content)
+    server.login('your gmail','your password')
+    server.sendmail('your gmail',to,content)
     server.close() 
 
 if __name__ == "__main__":
@@ -95,38 +95,17 @@ if __name__ == "__main__":
             speak("dawnlod opneing in progress")
             code = "C:\\Program Files (x86)\\Internet Download Manager\\IDMan.exe"
             os.startfile(code)  
-        elif 'email to manoj' in query:
+        elif 'email to friend' in query:
             try:
                 speak("what should i say?")
                 content = takecommand()
-                to = "devistudio21@gmail.com"
+                to = "friend gmail"
                 sendemail(to,content)
                 speak("Email has been sent!")
             except Exception as e:
                 print(e) 
                 speak("sorry i can't able to sent this email")
-
-        elif 'email to mum' in query:
-            try:
-                speak("what should i say?")
-                content = takecommand()
-                to = "devicutlery@gmail.com"
-                sendemail(to,content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e) 
-                speak("sorry i can't able to sent this email")
-
-        elif 'email to nikunj' in query:
-            try:
-                speak("what should i say?")
-                content = takecommand()
-                to = "terrorgaming210@gmail.com"
-                sendemail(to,content)
-                speak("Email has been sent!")
-            except Exception as e:
-                print(e) 
-                speak("sorry i can't able to sent this email")                
+                
         
         elif 'what is your name' in query:
             speak("my name is jarvis")
